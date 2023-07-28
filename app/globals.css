@@ -2,26 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Remove unnecessary :root and body styles */
+
+/* Apply styles to input fields */
+input[type="text"],
+input[type="password"] {
+  border: none;
+  border-bottom: 2px solid var(--primary); /* Use the primary color variable */
+  padding: 0.25rem 0; /* Add some padding for a better visual appearance */
+  transition: border-color 0.2s ease-in-out; /* Add a smooth transition */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--secondary); /* Use the secondary color variable when input is focused */
+  outline: none; /* Remove the default outline on focus */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Style placeholder text color */
+::placeholder {
+  color: var(--gray); /* Use the gray color variable for placeholder text */
 }
