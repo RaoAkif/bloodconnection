@@ -48,6 +48,17 @@ export default function Home() {
               <h2 className="mt-6 text-3xl font-bold text-gray-900">
                 Log in to your account
               </h2>
+
+              {/* Display Username and Password for testing */}
+              <div className="mt-4 bg-gray-100 p-4 rounded-md">
+                <h3 className="text-xl font-semibold text-red-700">Test Login</h3>
+                <p className="text-sm text-gray-600">
+                  <strong>Username:</strong> user123
+                </p>
+                <p className="text-sm text-gray-600">
+                  <strong>Password:</strong> pass123
+                </p>
+              </div>
             </div>
             {error && (
               <p className="text-center text-red-500 mb-4">{error}</p>
